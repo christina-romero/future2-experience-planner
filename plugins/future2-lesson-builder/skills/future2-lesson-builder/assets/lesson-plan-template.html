@@ -1,0 +1,95 @@
+<!--
+  Future 2 Experiences — LOCKED lesson-plan template.
+  Fill every {{PLACEHOLDER}}. Duplicate rows/blocks as needed.
+  Publish with Google Drive create_file:
+    contentMimeType: "text/html", textContent: <this filled HTML>  (do NOT set `content`)
+  Rules: say "Teacher" (never "Guide"); NO em dashes; NO horizontal rules;
+  every LESSON FLOW block carries time-stamped [MM:SS] teacher directions.
+  Palette (do not change):
+    banner #2E7C86 18pt UPPERCASE · subtitle #3E6B70 · section band #205A61 white
+    Do Now #5F8C48 · Direct Teach #D08A45 · Guided #6E5C93 · Independent #809B57 · Closing #4E8E8C (all white text)
+    overview/label cells #E5EEEE · differentiation & evidence labels #ECEFF1 · borders 1px #CBD9D9
+-->
+<html><head><meta charset="utf-8"><style>
+body,table,td,p{font-family:Calibri,Arial,sans-serif;font-size:11pt;color:#20303A;}
+h1{font-family:Calibri;font-size:18pt;color:#2E7C86;text-align:center;text-transform:uppercase;margin-bottom:2pt;}
+.sub{color:#3E6B70;text-align:center;font-size:12pt;margin-top:0;font-weight:bold;}
+table{border-collapse:collapse;width:100%;margin:8pt 0;}
+td{border:1px solid #CBD9D9;padding:6pt;vertical-align:top;}
+.band td{background:#205A61;color:#ffffff;font-weight:bold;text-align:center;font-size:12pt;}
+.lbl{background:#E5EEEE;font-weight:bold;width:26%;}
+.donow td{background:#5F8C48;color:#ffffff;font-weight:bold;}
+.teach td{background:#D08A45;color:#ffffff;font-weight:bold;}
+.guided td{background:#6E5C93;color:#ffffff;font-weight:bold;}
+.indep td{background:#809B57;color:#ffffff;font-weight:bold;}
+.close td{background:#4E8E8C;color:#ffffff;font-weight:bold;}
+.diff td.lbl{background:#ECEFF1;}
+</style></head><body>
+
+<h1>{{LESSON_TITLE}}</h1>
+<p class="sub">{{EXPERIENCE_NAME}}&nbsp; &middot;&nbsp; Grades {{GRADE_BAND}}&nbsp; &middot;&nbsp; Week {{WEEK}}&nbsp; &middot;&nbsp; Day {{DAY}}</p>
+
+<table>
+<tr class="band"><td colspan="2">EXPERIENCE OVERVIEW</td></tr>
+<tr><td class="lbl">Lesson Type</td><td>{{LESSON_TYPE_EQUALS_SS_DESIGN_TYPE}}</td></tr>
+<tr><td class="lbl">Competency</td><td>{{COMPETENCY}}</td></tr>
+<tr><td class="lbl">Rubric Indicator</td><td>{{RUBRIC_INDICATOR}}</td></tr>
+<tr><td class="lbl">Lesson Objective (LO)</td><td>{{LO_FIXED_FROM_HISD}}</td></tr>
+<tr><td class="lbl">Experience Objective (EO)</td><td>{{EO}}</td></tr>
+<tr><td class="lbl">Connection</td><td>{{CONNECTION_FIXED_FROM_HISD_WRITTEN_FORWARD}}</td></tr>
+<tr><td class="lbl">Materials needed</td><td>{{MATERIALS_SUMMARY_SCALABLE}} Full printable text in Materials Detail below.</td></tr>
+</table>
+
+<table>
+<tr class="band"><td colspan="2">MATERIALS DETAIL</td></tr>
+<tr><td class="lbl">The build and the win test</td><td>{{PHYSICAL_CORE_AND_BINARY_WIN_TEST}}</td></tr>
+<tr><td class="lbl">{{THROUGH_LINE_MOVE_NAME}}</td><td>{{THROUGH_LINE_STEPS}}</td></tr>
+<!-- Add role cards / logs / prompts as needed. For an AI day, include a Stage/decision-point/misuse-signal row. -->
+<tr><td class="lbl">{{HANDOUT_OR_AI_PROMPT}}</td><td>{{DETAIL}}</td></tr>
+</table>
+
+<table><tr class="band"><td>LESSON FLOW</td></tr></table>
+
+<table>
+<tr class="donow"><td>Do Now</td><td>{{MIN}} min</td></tr>
+<tr><td class="lbl">What happens</td><td>{{DO_NOW}}</td></tr>
+<tr><td class="lbl">Teacher directions (time-stamped)</td><td>[00:00] {{...}}<br>[02:00] {{...}}<br>[0X:00] Transition to Direct Teach.</td></tr>
+</table>
+
+<table>
+<tr class="teach"><td>Direct Teach</td><td>{{MIN}} min</td></tr>
+<tr><td class="lbl">What happens</td><td>{{DIRECT_TEACH_KEEP_TALK_UNDER_90S}}</td></tr>
+<tr><td class="lbl">Teacher directions (time-stamped)</td><td>[00:00] {{...}}<br>[0X:00] {{...}}</td></tr>
+</table>
+
+<table>
+<tr class="guided"><td>Guided Practice / Simulation</td><td>{{MIN}} min</td></tr>
+<tr><td class="lbl">What happens</td><td>{{GUIDED_COACHED_REDOS_ALLOWED}}</td></tr>
+<tr><td class="lbl">Teacher directions (time-stamped)</td><td>[00:00] {{...}}<br>[0X:00] {{...}}</td></tr>
+</table>
+
+<table>
+<tr class="indep"><td>Independent Practice / Human Advantage</td><td>{{MIN}} min</td></tr>
+<tr><td class="lbl">What happens</td><td>{{INDEPENDENT_WITH_EARNED_UNLOCK; on a Skills Lab this is the scored, no-coaching run}}</td></tr>
+<tr><td class="lbl">Teacher directions (time-stamped)</td><td>[00:00] {{...}}<br>[0X:00] {{...}}</td></tr>
+</table>
+
+<table>
+<tr class="close"><td>Closing / Reflection</td><td>{{MIN}} min</td></tr>
+<tr><td class="lbl">Reflection prompts</td><td>1. {{...}}<br>2. {{...}}<br>3. {{FORWARD_HOOK_TO_NEXT_DAY}}</td></tr>
+<tr><td class="lbl">Key reflection and materials</td><td>{{NAME_THE_SKILL_AND_RESET}}</td></tr>
+<tr><td class="lbl">Teacher directions (time-stamped)</td><td>[00:00] {{...}}<br>[0X:00] End.</td></tr>
+</table>
+
+<table class="diff">
+<tr class="band"><td colspan="2">DIFFERENTIATION</td></tr>
+<tr><td class="lbl">Scaffolds and sentence stems</td><td>{{SCAFFOLDS_STEMS}}</td></tr>
+<tr><td class="lbl">Extension for a greater challenge</td><td>{{ESCALATED_EXTENSION}}</td></tr>
+</table>
+
+<table class="diff">
+<tr class="band"><td colspan="2">{{EVIDENCE_HEADER: "EVIDENCE CAPTURED TODAY (FORMATIVE, FEEDS CHECKPOINT ...)" for practice days; "CHECKPOINT N EVIDENCE (SCORED: <INDICATOR>)" for a Skills Lab}}</td></tr>
+<tr><td class="lbl">{{"What is collected" (formative) or "What is scored" (checkpoint)}}</td><td>{{EVIDENCE; on a checkpoint state Proficient(3) and the reteach trigger}}</td></tr>
+</table>
+
+</body></html>

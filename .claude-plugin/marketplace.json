@@ -1,0 +1,18 @@
+{
+  "name": "alpha-hisd-future2",
+  "owner": {
+    "name": "Alpha (2 Hour Learning) — HISD Partnership",
+    "email": "christina.romero@2hourlearning.com"
+  },
+  "metadata": {
+    "description": "Internal Alpha × HISD skills for building Future 2 Experiences curriculum.",
+    "version": "1.0.0"
+  },
+  "plugins": [
+    {
+      "name": "future2-lesson-builder",
+      "source": "./plugins/future2-lesson-builder",
+      "description": "Locked build spec + styled HTML template for HISD Future 2 Experiences lesson plans (grades 3-8), aligned to the locked Scope & Sequence."
+    }
+  ]
+}
