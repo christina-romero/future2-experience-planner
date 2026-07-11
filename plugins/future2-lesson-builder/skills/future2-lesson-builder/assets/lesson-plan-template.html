@@ -20,7 +20,7 @@ h1{font-family:Calibri;font-size:18pt;color:#2E7C86;text-align:center;text-trans
 .sub{color:#3E6B70;text-align:center;font-size:12pt;margin-top:0;font-weight:bold;}
 table{border-collapse:collapse;width:100%;margin:8pt 0;}
 td{border:1px solid #CBD9D9;padding:6pt;vertical-align:top;}
-.lbl{background:#E5EEEE;font-weight:bold;width:22%;}
+.lbl{background:#E5EEEE;font-weight:bold;width:175px;} /* left column: just fits the field label; content column takes the rest */
 .planhdr td{background:#205A61;color:#fff;font-weight:bold;text-align:center;font-size:12pt;}
 /* block bands announce each section */
 .block td{color:#fff;font-weight:bold;font-size:13pt;text-align:center;padding:7pt;}
@@ -64,7 +64,7 @@ td{border:1px solid #CBD9D9;padding:6pt;vertical-align:top;}
 
 <!-- ONE FULLY-FILLED SLIDE (duplicate this block per slide; set class s-donow / s-tangerine / s-purple / s-green / s-reflect / s-close) -->
 <table class="slide s-donow">
-<tr><td class="shead" style="width:78%">Slide {{N}}: {{SLIDE_TITLE}}</td><td class="shead">{{MIN}} min</td></tr>
+<tr><td colspan="2" class="shead">Slide {{N}}: {{SLIDE_TITLE}} &middot; {{MIN}} min</td></tr>
 <tr><td class="lbl">Purpose</td><td>{{ONE_LINE_PURPOSE}}</td></tr>
 <tr class="onscreen"><td class="lbl">On Screen</td><td>{{VERBATIM_SLIDE_COPY: headline + bullets, ready to paste onto the slide}}</td></tr>
 <tr><td class="lbl">Visual</td><td>{{ILLUSTRATION_DIAGRAM_ICONS_TO_PLACE}}</td></tr>
