@@ -1,7 +1,7 @@
 {
   "name": "future2-lesson-builder",
-  "description": "Operational build spec and locked doc format for authoring HISD Future 2 Experiences lesson plans (grades 3-8), aligned to the locked HISD Scope & Sequence. Bundles the future2-lesson-builder skill.",
-  "version": "1.0.0",
+  "description": "Operational build spec + locked slide-by-slide doc format for HISD Future 2 Experiences lesson plans (grades 3-8), with the per-design-type lesson anatomy (Skills Lab = scored, no guided section), aligned to the locked HISD Scope & Sequence. Bundles the future2-lesson-builder skill.",
+  "version": "1.1.0",
   "author": {
     "name": "Alpha × HISD partnership team",
     "email": "christina.romero@2hourlearning.com"

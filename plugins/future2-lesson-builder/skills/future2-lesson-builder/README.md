@@ -8,11 +8,18 @@ Docs that match HISD's Scope & Sequence.
 purpose (the locked S&S sheet ID, staff-internalized titles, Google Drive tooling).
 
 ## What it enforces
-Fixed-vs-alterable S&S columns · Lesson Type = S&S Design Type (Skills Lab =
-scored checkpoint only) · scalable/low-cost materials · a real hands-on core with
-a binary win test · per-indicator through-line moves, escalated by band · the
-3-stage AI arc · a required, forward-written Connection · the exact styled HTML
-lesson-plan template · a pre-ship checklist.
+Fixed-vs-alterable S&S columns · the **per-design-type lesson anatomy** (Gradual
+Release / Guided Action / Skills Lab, each with its own block structure + timing;
+Skills Lab = scored, **no guided section**) · **slide-by-slide build detail** so
+HISD drops content straight onto slides (On Screen copy, Visual spec, Teacher
+Script, Possible Student Responses, sentence stems, engagement strategy) · a
+planning header carrying the forward-written **Connection** · scalable/low-cost
+materials · a real hands-on core with a binary win test · per-indicator
+through-line moves, escalated by band (the checkpoint scores the *named move*) ·
+the 3-stage AI arc · a pre-ship checklist.
+
+**Reference lesson** (the format working end to end): 7-8 B1 Day 8 Composure
+Challenge, a Skills Lab rendered slide-by-slide.
 
 ## Single source of truth
 All lessons align to the **LOCKED HISD Scope & Sequence**:

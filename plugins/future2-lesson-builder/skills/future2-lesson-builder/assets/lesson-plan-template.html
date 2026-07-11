@@ -1,14 +1,18 @@
 <!--
-  Future 2 Experiences — LOCKED lesson-plan template.
-  Fill every {{PLACEHOLDER}}. Duplicate rows/blocks as needed.
-  Publish with Google Drive create_file:
-    contentMimeType: "text/html", textContent: <this filled HTML>  (do NOT set `content`)
-  Rules: say "Teacher" (never "Guide"); NO em dashes; NO horizontal rules;
-  every LESSON FLOW block carries time-stamped [MM:SS] teacher directions.
-  Palette (do not change):
-    banner #2E7C86 18pt UPPERCASE · subtitle #3E6B70 · section band #205A61 white
-    Do Now #5F8C48 · Direct Teach #D08A45 · Guided #6E5C93 · Independent #809B57 · Closing #4E8E8C (all white text)
-    overview/label cells #E5EEEE · differentiation & evidence labels #ECEFF1 · borders 1px #CBD9D9
+  Future 2 Experiences — LOCKED slide-deck lesson-plan template.
+  This doc is a SLIDE-BY-SLIDE build sheet: HISD copies each "On Screen" block
+  straight onto a slide. Fill every {{PLACEHOLDER}}; duplicate a <table class="slide">
+  per slide. Publish with create_file (contentMimeType "text/html", textContent =
+  this filled HTML; do NOT set `content`).
+
+  STRUCTURE FOLLOWS THE DESIGN TYPE (Rule 2). Blocks + timing:
+    Gradual Release w/ Discussion: DoNow 3-5 · Tangerine 10 · Purple 15-20 · Green 25-30 · Reflection · Closure
+    Guided Action:                 DoNow 3-5 · Tangerine 5-10 · Purple 20-25 · Green 20-25 · Reflection · Closure
+    Skills Lab (scored):           DoNow 3-5 · Tangerine 5 · Green 40-45 · Reflection · Closure   [NO PURPLE/guided; mark where scoring begins]
+  Colors: Tangerine = Direct Teach · Purple = Guided · Green = Independent.
+  Rules: "Teacher" (never "Guide"); NO em dashes; NO horizontal rules; sentence
+  stem + engagement strategy on every slide; every slide has On Screen + Visual +
+  Teacher Script + Possible Student Responses.
 -->
 <html><head><meta charset="utf-8"><style>
 body,table,td,p{font-family:Calibri,Arial,sans-serif;font-size:11pt;color:#20303A;}
@@ -16,80 +20,85 @@ h1{font-family:Calibri;font-size:18pt;color:#2E7C86;text-align:center;text-trans
 .sub{color:#3E6B70;text-align:center;font-size:12pt;margin-top:0;font-weight:bold;}
 table{border-collapse:collapse;width:100%;margin:8pt 0;}
 td{border:1px solid #CBD9D9;padding:6pt;vertical-align:top;}
-.band td{background:#205A61;color:#ffffff;font-weight:bold;text-align:center;font-size:12pt;}
-.lbl{background:#E5EEEE;font-weight:bold;width:26%;}
-.donow td{background:#5F8C48;color:#ffffff;font-weight:bold;}
-.teach td{background:#D08A45;color:#ffffff;font-weight:bold;}
-.guided td{background:#6E5C93;color:#ffffff;font-weight:bold;}
-.indep td{background:#809B57;color:#ffffff;font-weight:bold;}
-.close td{background:#4E8E8C;color:#ffffff;font-weight:bold;}
-.diff td.lbl{background:#ECEFF1;}
+.lbl{background:#E5EEEE;font-weight:bold;width:22%;}
+.planhdr td{background:#205A61;color:#fff;font-weight:bold;text-align:center;font-size:12pt;}
+/* block bands announce each section */
+.block td{color:#fff;font-weight:bold;font-size:13pt;text-align:center;padding:7pt;}
+.b-donow td{background:#5F8C48;}
+.b-tangerine td{background:#D08A45;}
+.b-purple td{background:#6E5C93;}
+.b-green td{background:#809B57;}
+.b-reflect td{background:#4E8E8C;}
+.b-close td{background:#205A61;}
+/* slide header row inherits its block color via the slide's class */
+.slide td.shead{color:#fff;font-weight:bold;}
+.s-donow td.shead{background:#5F8C48;}
+.s-tangerine td.shead{background:#D08A45;}
+.s-purple td.shead{background:#6E5C93;}
+.s-green td.shead{background:#809B57;}
+.s-reflect td.shead{background:#4E8E8C;}
+.s-close td.shead{background:#205A61;}
+/* the verbatim slide copy is visually distinct */
+.onscreen{background:#F3F7F7;}
+.onscreen .lbl{background:#DCE8E8;}
 </style></head><body>
 
 <h1>{{LESSON_TITLE}}</h1>
-<p class="sub">{{EXPERIENCE_NAME}}&nbsp; &middot;&nbsp; Grades {{GRADE_BAND}}&nbsp; &middot;&nbsp; Week {{WEEK}}&nbsp; &middot;&nbsp; Day {{DAY}}</p>
+<p class="sub">{{EXPERIENCE_NAME}}&nbsp; &middot;&nbsp; Grades {{GRADE_BAND}}&nbsp; &middot;&nbsp; {{COMPETENCY_A1_OR_B1}}&nbsp; &middot;&nbsp; Week {{WEEK}}&nbsp; &middot;&nbsp; Day {{DAY}}</p>
 
+<!-- ============ PLANNING HEADER (not a slide; our fidelity layer) ============ -->
 <table>
-<tr class="band"><td colspan="2">EXPERIENCE OVERVIEW</td></tr>
-<tr><td class="lbl">Lesson Type</td><td>{{LESSON_TYPE_EQUALS_SS_DESIGN_TYPE}}</td></tr>
+<tr class="planhdr"><td colspan="2">PLANNING HEADER</td></tr>
 <tr><td class="lbl">Competency</td><td>{{COMPETENCY}}</td></tr>
 <tr><td class="lbl">Rubric Indicator</td><td>{{RUBRIC_INDICATOR}}</td></tr>
-<tr><td class="lbl">Lesson Objective (LO)</td><td>{{LO_FIXED_FROM_HISD}}</td></tr>
-<tr><td class="lbl">Experience Objective (EO)</td><td>{{EO}}</td></tr>
+<tr><td class="lbl">Lesson Design Type</td><td>{{DESIGN_TYPE_DRIVES_STRUCTURE}}</td></tr>
+<tr><td class="lbl">LO (what am I learning)</td><td>{{LO_FIXED_FROM_HISD}}</td></tr>
+<tr><td class="lbl">EO (what am I doing)</td><td>{{EO}}</td></tr>
 <tr><td class="lbl">Connection</td><td>{{CONNECTION_FIXED_FROM_HISD_WRITTEN_FORWARD}}</td></tr>
-<tr><td class="lbl">Materials needed</td><td>{{MATERIALS_SUMMARY_SCALABLE}} Full printable text in Materials Detail below.</td></tr>
+<tr><td class="lbl">Materials</td><td>{{MATERIALS_SCALABLE}}</td></tr>
+<tr><td class="lbl">Lesson length</td><td>{{TOTAL_MIN}} minutes</td></tr>
 </table>
 
-<table>
-<tr class="band"><td colspan="2">MATERIALS DETAIL</td></tr>
-<tr><td class="lbl">The build and the win test</td><td>{{PHYSICAL_CORE_AND_BINARY_WIN_TEST}}</td></tr>
-<tr><td class="lbl">{{THROUGH_LINE_MOVE_NAME}}</td><td>{{THROUGH_LINE_STEPS}}</td></tr>
-<!-- Add role cards / logs / prompts as needed. For an AI day, include a Stage/decision-point/misuse-signal row. -->
-<tr><td class="lbl">{{HANDOUT_OR_AI_PROMPT}}</td><td>{{DETAIL}}</td></tr>
+<!-- ============ DO NOW (3-5 min) ============ -->
+<table class="block b-donow"><tr><td>DO NOW ({{MIN}} min)</td></tr></table>
+
+<!-- ONE FULLY-FILLED SLIDE (duplicate this block per slide; set class s-donow / s-tangerine / s-purple / s-green / s-reflect / s-close) -->
+<table class="slide s-donow">
+<tr><td class="shead" style="width:78%">Slide {{N}}: {{SLIDE_TITLE}}</td><td class="shead">{{MIN}} min</td></tr>
+<tr><td class="lbl">Purpose</td><td>{{ONE_LINE_PURPOSE}}</td></tr>
+<tr class="onscreen"><td class="lbl">On Screen</td><td>{{VERBATIM_SLIDE_COPY: headline + bullets, ready to paste onto the slide}}</td></tr>
+<tr><td class="lbl">Visual</td><td>{{ILLUSTRATION_DIAGRAM_ICONS_TO_PLACE}}</td></tr>
+<tr><td class="lbl">Student Engagement Strategy</td><td>{{WHAT_STUDENTS_DO (e.g., Think-Write, Turn-and-Talk, Build) — the on-slide engagement icon}}<br><b>Sentence Stem/Starter:</b> {{STEM_ON_SLIDE}}</td></tr>
+<tr><td class="lbl">Teacher Guidance</td><td>{{WHAT_THE_TEACHER_DOES}}</td></tr>
+<tr><td class="lbl">Teacher Script</td><td>"{{EXACT_WORDS_TO_SAY}}"</td></tr>
+<tr><td class="lbl">Possible Student Responses</td><td>{{ANTICIPATED_RESPONSES_QUESTIONS_ACTIONS}}</td></tr>
+<tr><td class="lbl">Evidence to Observe</td><td>{{FORMATIVE, or on a Skills Lab: what is scored + whether scoring has begun}}</td></tr>
+<tr><td class="lbl">Transition</td><td>"{{EXACT_WORDS_TO_NEXT_SLIDE}}"</td></tr>
 </table>
 
-<table><tr class="band"><td>LESSON FLOW</td></tr></table>
+<!-- Put the LO slide early (usually first Tangerine slide): On Screen = Competency + Rubric Indicator + Design Type + LO + EO. Include a Materials slide too. -->
 
-<table>
-<tr class="donow"><td>Do Now</td><td>{{MIN}} min</td></tr>
-<tr><td class="lbl">What happens</td><td>{{DO_NOW}}</td></tr>
-<tr><td class="lbl">Teacher directions (time-stamped)</td><td>[00:00] {{...}}<br>[02:00] {{...}}<br>[0X:00] Transition to Direct Teach.</td></tr>
-</table>
+<!-- ============ TANGERINE / DIRECT TEACH (GR 10 · Guided Action 5-10 · Skills Lab 5) ============ -->
+<table class="block b-tangerine"><tr><td>DIRECT TEACH &middot; TANGERINE ({{MIN}} min)</td></tr></table>
+<!-- <table class="slide s-tangerine"> ... same field rows ... </table> -->
 
-<table>
-<tr class="teach"><td>Direct Teach</td><td>{{MIN}} min</td></tr>
-<tr><td class="lbl">What happens</td><td>{{DIRECT_TEACH_KEEP_TALK_UNDER_90S}}</td></tr>
-<tr><td class="lbl">Teacher directions (time-stamped)</td><td>[00:00] {{...}}<br>[0X:00] {{...}}</td></tr>
-</table>
+<!-- ============ PURPLE / GUIDED (GR 15-20 · Guided Action 20-25) ============
+     OMIT THIS ENTIRE BLOCK FOR A SKILLS LAB (no guided section). -->
+<table class="block b-purple"><tr><td>GUIDED &middot; PURPLE ({{MIN}} min) (omit for Skills Lab)</td></tr></table>
+<!-- <table class="slide s-purple"> ... </table> -->
 
-<table>
-<tr class="guided"><td>Guided Practice / Simulation</td><td>{{MIN}} min</td></tr>
-<tr><td class="lbl">What happens</td><td>{{GUIDED_COACHED_REDOS_ALLOWED}}</td></tr>
-<tr><td class="lbl">Teacher directions (time-stamped)</td><td>[00:00] {{...}}<br>[0X:00] {{...}}</td></tr>
-</table>
+<!-- ============ GREEN / INDEPENDENT (GR 25-30 · Guided Action 20-25 · Skills Lab 40-45) ============
+     Chunk so the stakes rise multiple times. On a Skills Lab, include a "scoring
+     begins" slide and keep the teacher hands-off / scoring only. -->
+<table class="block b-green"><tr><td>INDEPENDENT &middot; GREEN ({{MIN}} min)</td></tr></table>
+<!-- <table class="slide s-green"> ... </table> -->
 
-<table>
-<tr class="indep"><td>Independent Practice / Human Advantage</td><td>{{MIN}} min</td></tr>
-<tr><td class="lbl">What happens</td><td>{{INDEPENDENT_WITH_EARNED_UNLOCK; on a Skills Lab this is the scored, no-coaching run}}</td></tr>
-<tr><td class="lbl">Teacher directions (time-stamped)</td><td>[00:00] {{...}}<br>[0X:00] {{...}}</td></tr>
-</table>
+<!-- ============ REFLECTION ============ -->
+<table class="block b-reflect"><tr><td>REFLECTION ({{MIN}} min)</td></tr></table>
+<!-- <table class="slide s-reflect"> ... </table> -->
 
-<table>
-<tr class="close"><td>Closing / Reflection</td><td>{{MIN}} min</td></tr>
-<tr><td class="lbl">Reflection prompts</td><td>1. {{...}}<br>2. {{...}}<br>3. {{FORWARD_HOOK_TO_NEXT_DAY}}</td></tr>
-<tr><td class="lbl">Key reflection and materials</td><td>{{NAME_THE_SKILL_AND_RESET}}</td></tr>
-<tr><td class="lbl">Teacher directions (time-stamped)</td><td>[00:00] {{...}}<br>[0X:00] End.</td></tr>
-</table>
-
-<table class="diff">
-<tr class="band"><td colspan="2">DIFFERENTIATION</td></tr>
-<tr><td class="lbl">Scaffolds and sentence stems</td><td>{{SCAFFOLDS_STEMS}}</td></tr>
-<tr><td class="lbl">Extension for a greater challenge</td><td>{{ESCALATED_EXTENSION}}</td></tr>
-</table>
-
-<table class="diff">
-<tr class="band"><td colspan="2">{{EVIDENCE_HEADER: "EVIDENCE CAPTURED TODAY (FORMATIVE, FEEDS CHECKPOINT ...)" for practice days; "CHECKPOINT N EVIDENCE (SCORED: <INDICATOR>)" for a Skills Lab}}</td></tr>
-<tr><td class="lbl">{{"What is collected" (formative) or "What is scored" (checkpoint)}}</td><td>{{EVIDENCE; on a checkpoint state Proficient(3) and the reteach trigger}}</td></tr>
-</table>
+<!-- ============ CLOSURE (stamp key ideas + clean up materials) ============ -->
+<table class="block b-close"><tr><td>CLOSURE ({{MIN}} min)</td></tr></table>
+<!-- <table class="slide s-close"> ... </table> -->
 
 </body></html>

@@ -6,13 +6,13 @@
   },
   "metadata": {
     "description": "Internal Alpha × HISD skills for building Future 2 Experiences curriculum.",
-    "version": "1.0.0"
+    "version": "1.1.0"
   },
   "plugins": [
     {
       "name": "future2-lesson-builder",
       "source": "./plugins/future2-lesson-builder",
-      "description": "Locked build spec + styled HTML template for HISD Future 2 Experiences lesson plans (grades 3-8), aligned to the locked Scope & Sequence."
+      "description": "Locked build spec + slide-by-slide doc format for HISD Future 2 Experiences lesson plans (grades 3-8): per-design-type anatomy (Skills Lab = scored, no guided section) and slide-ready detail, aligned to the locked Scope & Sequence."
     }
   ]
 }
