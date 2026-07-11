@@ -16,7 +16,7 @@ partnership. Ships the skills we use to build Future 2 Experiences curriculum.
 ## Install (Claude Code / Agent SDK) — recommended, auto-updates
 
 ```
-/plugin marketplace add <owner>/alpha-hisd-future2-skills
+/plugin marketplace add <owner>/future2-experience-planner
 /plugin install future2-lesson-builder@alpha-hisd-future2
 ```
 
